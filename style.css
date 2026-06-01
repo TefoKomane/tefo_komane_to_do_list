@@ -1,0 +1,135 @@
+body {
+    background-color: #1d1d1d;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+#addBtn {
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#addBtn:hover {
+    opacity: 0.8;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-btn:hover {
+    opacity: 0.8;
+}
+
+.filter-btn.active {
+    background-color: black;
+    color: white;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+.empty-message {
+    text-align: center;
+    color: #666;
+    padding: 20px 10px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.task-buttons button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.complete-btn {
+    background-color: green;
+}
+
+.archive-btn {
+    background-color: #6c757d;
+}
+
+.delete-btn {
+    background-color: red;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+}
