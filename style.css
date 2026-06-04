@@ -83,45 +83,55 @@ h1 {
     padding: 20px 10px;
 }
 
+/* ✅ flex row so dot, text, and buttons line up neatly */
 .task-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 10px;
     background-color: #f1f1f1;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
 }
 
-.completed{
+.completed span {
     text-decoration: line-through;
     opacity: 0.6;
 }
 
+/* ✅ button group — sits on the right */
 .task-buttons {
     display: flex;
     gap: 5px;
-    flex-wrap: wrap;
+    flex-shrink: 0;
 }
 
+/* ✅ all task buttons share base styles */
 .task-buttons button {
     border: none;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 5px;
     cursor: pointer;
     color: white;
+    font-size: 13px;
+    font-weight: bold;
 }
 
+.task-buttons button:hover {
+    opacity: 0.85;
+}
+
+/* ✅ individual button colours */
 .complete-btn {
-    background-color: green;
+    background-color: #27ae60;
 }
 
 .archive-btn {
-    background-color: #6c757d;
+    background-color: #e67e22;
 }
 
 .delete-btn {
-    background-color: red;
+    background-color: #e74c3c;
 }
 
 @media (max-width: 600px) {
@@ -132,4 +142,33 @@ h1 {
     .input-section {
         flex-direction: column;
     }
+}
+
+/* colour tags */
+.colour-tag-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.colour-tag-section label { font-size: 13px; color: #555; font-weight: bold; }
+
+.colour-swatch {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.colour-swatch:hover { transform: scale(1.2); }
+.colour-swatch.selected { border-color: #222; transform: scale(1.2); }
+
+.colour-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 1px solid rgba(0,0,0,0.15);
+    display: inline-block;
 }
